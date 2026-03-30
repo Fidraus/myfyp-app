@@ -43,6 +43,7 @@ dependencies:
   timezone: ^0.9.4
   image_picker: ^1.1.2
   table_calendar: ^3.1.2
+  flutter_dotenv: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,7 @@ flutter:
   assets:
     - assets/car_featured.png
     - assets/logo.png
+    - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

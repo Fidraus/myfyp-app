@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class TroubleshootScreen extends StatefulWidget {
   const TroubleshootScreen({super.key});
@@ -265,8 +266,7 @@ class _TroubleshootScreenState extends State<TroubleshootScreen> {
       _aiResult = null;
     });
 
-    // TODO: Load this from an environment variable!
-    const apiKey = 'YOUR_GROQ_API_KEY_HERE';
+    final apiKey = dotenv.env['GROQ_API_KEY'] ?? '';
     final url = Uri.parse('https://api.groq.com/openai/v1/chat/completions');
 
     try {
